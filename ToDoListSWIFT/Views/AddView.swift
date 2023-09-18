@@ -9,7 +9,14 @@ import SwiftUI
 
 struct AddView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @EnvironmentObject var listViewModel: ListViewModel
+    
     @State var textFieldText: String = ""
+    
+    @State var alertTitle: String = ""
+    @State var showAllert: Bool = false
     
     var body: some View {
         ScrollView {
@@ -18,9 +25,7 @@ struct AddView: View {
                     .padding(.horizontal)
                 .frame(height: 55)
                 
-                Button(action: {
-                    
-                }, label: {
+                Button(action: saveButtonPressed, label: {
                     Text("Save")
                         .foregroundColor(.white)
                         .font(.headline)
@@ -32,7 +37,27 @@ struct AddView: View {
             }
             .padding(16)
         }
-        .navigationTitle("Добавить задачу✏️")
+        .navigationTitle("✏️Добавить задачу")
+        .alert(isPresented: $showAllert, content: getAlert)
+    }
+    func saveButtonPressed() {
+        if textCorrection() == true {
+            listViewModel.addItem(title: textFieldText)
+            presentationMode.wrappedValue.dismiss()}
+        
+    }
+    
+    func textCorrection() -> Bool {
+        if textFieldText.count < 1 {
+            alertTitle = "Пустое поле"
+            showAllert.toggle()
+            return false
+        }
+        return true
+    }
+    
+    func getAlert() -> Alert {
+        return Alert(title: Text(alertTitle))
     }
 }
 
@@ -41,5 +66,6 @@ struct AddView_Previews: PreviewProvider {
         NavigationView {
             AddView()
         }
+        .environmentObject(ListViewModel())
     }
 }

@@ -8,7 +8,16 @@
 import Foundation
 
 struct ItemModel: Identifiable {
-    let id: String = UUID().uuidString
+    let id: String
     let title: String
     let isComplited: Bool
+    
+    init(id: String = UUID().uuidString, title: String, isComplited: Bool) {
+        self.title = title
+        self.isComplited = isComplited
+        self.id = id
+    }
+    func updateCompletion() -> ItemModel {
+        return ItemModel(id: id, title: title, isComplited: !isComplited)
+    }
 }
