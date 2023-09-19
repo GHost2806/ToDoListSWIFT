@@ -15,6 +15,7 @@
 		D071D4F02AB84B3400CC562C /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071D4EF2AB84B3400CC562C /* AddView.swift */; };
 		D071D4F32AB851D400CC562C /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071D4F22AB851D400CC562C /* ItemModel.swift */; };
 		D071D4F62AB8581300CC562C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071D4F52AB8581300CC562C /* ListViewModel.swift */; };
+		D071D4F82AB97D4700CC562C /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071D4F72AB97D4700CC562C /* NoItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D071D4EF2AB84B3400CC562C /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		D071D4F22AB851D400CC562C /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		D071D4F52AB8581300CC562C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D071D4F72AB97D4700CC562C /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				D071D4EB2AB842BC00CC562C /* ListView.swift */,
 				D071D4ED2AB8468E00CC562C /* ListRowView.swift */,
 				D071D4EF2AB84B3400CC562C /* AddView.swift */,
+				D071D4F72AB97D4700CC562C /* NoItemsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				D071D4F62AB8581300CC562C /* ListViewModel.swift in Sources */,
 				D071D4DD2AB841CC00CC562C /* ToDoListSWIFTApp.swift in Sources */,
 				D071D4EC2AB842BC00CC562C /* ListView.swift in Sources */,
+				D071D4F82AB97D4700CC562C /* NoItemsView.swift in Sources */,
 				D071D4EE2AB8468E00CC562C /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
